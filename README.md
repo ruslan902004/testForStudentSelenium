@@ -1,1 +1,2 @@
 # testForStudentSelenium
+Изучение PageObject
