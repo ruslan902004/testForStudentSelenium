@@ -33,6 +33,12 @@ def browser(request):
         fp = webdriver.FirefoxProfile()
         fp.set_preference("intl.accept_languages", 'es-SPA, es')
         #browser = webdriver.Firefox(firefox_profile=fp)
+    elif language == 'en':
+        options.add_experimental_option(
+            'prefs', {'intl.accept_languages': 'en, en'})
+        fp = webdriver.FirefoxProfile()
+        fp.set_preference("intl.accept_languages", 'en, en')
+        #browser = webdriver.Firefox(firefox_profile=fp)
     if browser_name == "chrome":
         print("\nstart chrome browser for test..")
         browser = webdriver.Chrome(options=options)
